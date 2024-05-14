@@ -59,7 +59,6 @@ while continuar:
         resultados_dados = []
         for i in range(numb):
             d12 = random.randint(1,12)
-            print(d12)
             resultados_dados.append(d12)
             d12 = int(d12)
 
@@ -70,47 +69,143 @@ while continuar:
                 resultado = soma + modificador
                 print(f'A soma dos dados é {soma} e com os modificadores é {resultado}')
 
-        elif qtd_dados == 2:
-            maior_resultado = max(resultados_dados)
-            resultado = maior_resultado + modificador
-            print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
+            elif qtd_dados == 2:
+                maior_resultado = max(resultados_dados)
+                resultado = maior_resultado + modificador
+                print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
 
-        elif qtd_dados == 3:
-            menor_resultado = min(resultados_dados)
-            resultado = menor_resultado + modificador
-            print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
+            elif qtd_dados == 3:
+                menor_resultado = min(resultados_dados)
+                resultado = menor_resultado + modificador
+                print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
+
+        else:
+            resultado = d12 + modificador
+            print(f'Você tirou {d12} e com os modificadores ficau {resultado}')
 
         continuar = input("deseja rolar outro dado? (s/n)")
 
     elif dado == "d10":
-        d10 = random.randint(1,10)
-        d10 = int(d10)
-        resultado = int(d10 + modificador)
-        print(f'você tirou {d10} e o com seus modificadores o resultado é: {resultado}')
+        numb = int(input("Quantos d10 você precisa rolar? "))
+        resultados_dados = []
+        for i in range(numb):
+            d10 = random.randint(1,10)
+            resultados_dados.append(d10)
+            d10 = int(d10)
+
+        if numb > 1:
+            qtd_dados = int(input(f'você quer a \n 1) soma dos dados\n 2) maior dado\n 3) menor dado '))
+            if qtd_dados == 1:
+                soma = sum(resultados_dados)
+                resultado = soma + modificador
+                print(f'A soma dos dados é {soma} e com os modificadores é {resultado}')
+
+            elif qtd_dados == 2:
+                maior_resultado = max(resultados_dados)
+                resultado = maior_resultado + modificador
+                print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
+
+            elif qtd_dados == 3:
+                menor_resultado = min(resultados_dados)
+                resultado = menor_resultado + modificador
+                print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
+
+        else:
+            resultado = d10 + modificador
+            print(f'Você tirou {d10} e com os modificadores ficau {resultado}')
 
         continuar = input("deseja rolar outro dado? (s/n)")
 
     elif dado == "d8":
-        d8 = random.randint(1,8)
-        d8 = int(d8)
-        resultado = int(d8 + modificador)
-        print(f'você tirou {d8} e o com seus modificadores o resultado é: {resultado}')
+        numb = int(input("Quantos d8 você precisa rolar? "))
+        resultados_dados = []
+        for i in range(numb):
+            d8 = random.randint(1,8)
+            resultados_dados.append(d8)
+            d8 = int(d8)
+
+        if numb > 1:
+            qtd_dados = int(input(f'você quer a \n 1) soma dos dados\n 2) maior dado\n 3) menor dado '))
+            if qtd_dados == 1:
+                soma = sum(resultados_dados)
+                resultado = soma + modificador
+                print(f'A soma dos dados é {soma} e com os modificadores é {resultado}')
+
+            elif qtd_dados == 2:
+                maior_resultado = max(resultados_dados)
+                resultado = maior_resultado + modificador
+                print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
+
+            elif qtd_dados == 3:
+                menor_resultado = min(resultados_dados)
+                resultado = menor_resultado + modificador
+                print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
+
+        else:
+            resultado = d8 + modificador
+            print(f'Você tirou {d8} e com os modificadores ficau {resultado}')
 
         continuar = input("deseja rolar outro dado? (s/n)")
 
     elif dado == "d6":
-        d6 = random.randint(1,6)
-        d6 = int(d6)
-        resultado = int(d6 + modificador)
-        print(f'você tirou {d6} e o com seus modificadores o resultado é: {resultado}')
+        numb = int(input("Quantos d6 você precisa rolar? "))
+        resultados_dados = []
+        for i in range(numb):
+            d6 = random.randint(1,6)
+            resultados_dados.append(d6)
+            d6 = int(d6)
+
+        if numb > 1:
+            qtd_dados = int(input(f'você quer a \n 1) soma dos dados\n 2) maior dado\n 3) menor dado '))
+            if qtd_dados == 1:
+                soma = sum(resultados_dados)
+                resultado = soma + modificador
+                print(f'A soma dos dados é {soma} e com os modificadores é {resultado}')
+
+            elif qtd_dados == 2:
+                maior_resultado = max(resultados_dados)
+                resultado = maior_resultado + modificador
+                print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
+
+            elif qtd_dados == 3:
+                menor_resultado = min(resultados_dados)
+                resultado = menor_resultado + modificador
+                print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
+
+        else:
+            resultado = d6 + modificador
+            print(f'Você tirou {d6} e com os modificadores ficau {resultado}')
 
         continuar = input("deseja rolar outro dado? (s/n)")
 
     elif dado == "d4":
-        d4 = random.randint(1,4)
-        d4 = int(d4)
-        resultado = int(d4 + modificador)
-        print(f'você tirou {d4} e o com seus modificadores o resultado é: {resultado}')
+        numb = int(input("Quantos d12 você precisa rolar? "))
+        resultados_dados = []
+        for i in range(numb):
+            d4 = random.randint(1,4)
+            resultados_dados.append(d4)
+            d4 = int(d4)
+
+        if numb > 1:
+            qtd_dados = int(input(f'você quer a \n 1) soma dos dados\n 2) maior dado\n 3) menor dado '))
+            if qtd_dados == 1:
+                soma = sum(resultados_dados)
+                resultado = soma + modificador
+                print(f'A soma dos dados é {soma} e com os modificadores é {resultado}')
+
+            elif qtd_dados == 2:
+                maior_resultado = max(resultados_dados)
+                resultado = maior_resultado + modificador
+                print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
+
+            elif qtd_dados == 3:
+                menor_resultado = min(resultados_dados)
+                resultado = menor_resultado + modificador
+                print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
+
+        else:
+            resultado = d4 + modificador
+            print(f'Você tirou {d4} e com os modificadores ficau {resultado}')
 
         continuar = input("deseja rolar outro dado? (s/n)")
 
