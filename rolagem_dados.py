@@ -13,26 +13,72 @@ while continuar:
 
 
     if dado == "d20":
-        d20 = random.randint(1,20)
-        d20 = int(d20)
-        resultado = int(d20 + modificador)
+        numb = int(input("Quantos d20 você precisa rolar? "))
+        resultados_dados = []
+        for i in range(numb):
+            d20 = random.randint(1,20)
+            resultados_dados.append(d20)
+            d20 = int(d20)
 
-        if d20 == 20:
-            print(f'Acerto critico você tirou {d20} e com seus modificadores o resultado é: {resultado}')
+        if numb > 1:
+            qtd_dados = int(input(f'você quer a \n 1) soma dos dados\n 2) maior dado\n 3) menor dado '))
+            if qtd_dados == 1:
+                soma = sum(resultados_dados)
+                resultado = soma + modificador
+                print(f'A soma dos dados é {soma} e com os modificadores é {resultado}')
 
-        elif d20 == 1:
-            print(f'Erro critico, você tirou {d20} e o com seus modificadores o resultado é: {resultado}')
+            elif qtd_dados == 2:
+                maior_resultado = max(resultados_dados)
+                resultado = maior_resultado + modificador
+                if maior_resultado == 20:
+                    print(f' Acerto Critco, você tirou {maior_resultado} e com os modificadores ficou {resultado}')
+                else:
+                    print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
 
+            elif qtd_dados == 3:
+                menor_resultado = min(resultados_dados)
+                resultado = menor_resultado + modificador
+                if menor_resultado == 1:
+                    print(f' Erro Critco, você tirou {maior_resultado} e com os modificadores ficou {resultado}')
+                else:
+                    print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
         else:
-            print(f'você tirou {d20} e o com seus modificadores o resultado é: {resultado}')
+            resultado =  d20 + modificador
+            if d20 == 20:
+                print(f' Acerto Critco, você tirou {d20} e com os modificadores ficou {resultado}')
+            elif d20 == 1:
+                print(f' Erro Critco, você tirou {d20} e com os modificadores ficou {resultado}')
+            else:
+                print(f'Você tirou {d20} e com o modificador ficou {resultado}')
+
 
         continuar = input("deseja rolar outro dado? (s/n)")
 
     elif dado == "d12":
-        d12 = random.randint(1,12)
-        d12 = int(d12)
-        resultado = int(d12 + modificador)
-        print(f'você tirou {d12} e o com seus modificadores o resultado é: {resultado}')
+        numb = int(input("Quantos d12 você precisa rolar? "))
+        resultados_dados = []
+        for i in range(numb):
+            d12 = random.randint(1,12)
+            print(d12)
+            resultados_dados.append(d12)
+            d12 = int(d12)
+
+        if numb > 1:
+            qtd_dados = int(input(f'você quer a \n 1) soma dos dados\n 2) maior dado\n 3) menor dado '))
+            if qtd_dados == 1:
+                soma = sum(resultados_dados)
+                resultado = soma + modificador
+                print(f'A soma dos dados é {soma} e com os modificadores é {resultado}')
+
+        elif qtd_dados == 2:
+            maior_resultado = max(resultados_dados)
+            resultado = maior_resultado + modificador
+            print(f'Você tirou {maior_resultado} e com o modificador ficou {resultado}')
+
+        elif qtd_dados == 3:
+            menor_resultado = min(resultados_dados)
+            resultado = menor_resultado + modificador
+            print(f'Você tirou {menor_resultado} e com o modificador ficou {resultado}')
 
         continuar = input("deseja rolar outro dado? (s/n)")
 
